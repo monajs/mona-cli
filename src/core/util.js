@@ -1,4 +1,6 @@
 const chalk = require('chalk')
+const fs = require('fs')
+const path = require('path')
 require('console.table')
 
 function log (message = '', type, timestamp = true) {
@@ -45,5 +47,12 @@ log.table = (list) => {
 }
 
 module.exports = {
-  log
+  log,
+  // 绘制字节码
+  renderAscii () {
+    const ascii = fs.readFileSync(path.resolve(__dirname, '../resource/ascii-monajs.txt'))
+    log('', null, false)
+    log(ascii, 'green', false)
+    log('', null, false)
+  }
 }
