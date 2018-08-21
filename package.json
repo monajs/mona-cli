@@ -1,0 +1,37 @@
+{
+  "name": "mona-cli",
+  "version": "0.0.1",
+  "description": "Mona系列-命令行工具",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "mona": "./bin/cli.js",
+    "mo": "./bin/cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/func-star/mona-cli.git"
+  },
+  "keywords": [
+    "monajs",
+    "mona",
+    "mona-cli",
+    "cli"
+  ],
+  "author": "yangxi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/func-star/mona-cli/issues"
+  },
+  "homepage": "https://github.com/func-star/mona-cli#readme",
+  "devDependencies": {
+    "eslint": "^5.4.0"
+  },
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "console.table": "^0.10.0",
+    "yargs": "^12.0.1"
+  }
+}
