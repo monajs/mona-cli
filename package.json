@@ -1,6 +1,6 @@
 {
-  "name": "mona-cli",
-  "version": "0.2.0",
+  "name": "@monajs/mona-cli",
+  "version": "0.3.0",
   "description": "Mona系列-命令行工具",
   "main": "index.js",
   "scripts": {
@@ -37,9 +37,9 @@
     "uid": "0.0.2"
   },
   "dependencies": {
+    "@monajs/commander": "^0.4.1",
     "chalk": "^2.4.1",
     "console.table": "^0.10.0",
-    "tinify": "^1.6.0-beta.2",
-    "yargs": "^12.0.1"
+    "tinify": "^1.6.0-beta.2"
   }
 }

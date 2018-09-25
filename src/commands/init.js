@@ -1,4 +1,4 @@
-const { log } = require('../core/util')
+const { log, renderAscii } = require('../core/util')
 const Inquire = require('inquirer')
 const path = require('path')
 const fs = require('fs')
@@ -10,20 +10,13 @@ const uid = require('uid')
 const rm = require('rimraf').sync
 const { githubTemplates } = require('../data/init')
 
-exports.command = 'init'
-
-exports.aliases = ['init']
-
-exports.desc = '初始化项目'
-
-exports.builder = {}
-
 const initProject = {
     init (argvs) {
         const { _ } = argvs
         this.projectInfo.fromGit = !argvs.l
         if (!this.projectInfo.fromGit) {
             if (!_[1]) {
+                renderAscii()
                 log.error('本地模版地址不能为空！')
                 return
             } else {
@@ -34,7 +27,7 @@ const initProject = {
     },
     
     projectInfo: {
-        fromGit: true // 资源来源 - github | local
+        fromGit: true // 模版来源 - github | local
     },
     
     getInfo () {
@@ -104,6 +97,7 @@ const initProject = {
                 log.error(err)
                 return
             }
+            renderAscii()
             log.success('创建成功！')
         })
     },
@@ -122,6 +116,6 @@ const initProject = {
     }
 }
 
-exports.handler = async argvs => {
+exports.handler = argvs => {
     initProject.init(argvs)
 }
