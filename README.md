@@ -7,7 +7,7 @@
 ✨✨ 一个命令行工具，快来试一下吧！！
 
 ```bash
-$ npm i --g @monajs/mona-cli
+$ npm i -g @monajs/mona-cli
 ```
 
 
