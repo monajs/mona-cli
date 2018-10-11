@@ -20,7 +20,7 @@ $ npm i --g @monajs/mona-cli
 
 `init` 是一个用来初始化工程模版的工具
 
-1. 你可以通过 `npm init -l 模版路径` 来下载工程模版
+1. 你可以通过 `npm init -l 模版路径` 来下载本地工程模版
 2. 你也可以直接 `npm init` 来下载托管在 `github` 上的工程模版 
 
 
